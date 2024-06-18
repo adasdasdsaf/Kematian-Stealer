@@ -9,7 +9,7 @@ import (
 )
 
 func AutoUpdate() bool {
-	url := "https://raw.githubusercontent.com/Somali-Devs/Kematian-Stealer/main/builder-src/FyneApp.toml"
+	url := "https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/builder-src/FyneApp.toml"
 
 	resp, err := http.Get(url)
 	if err != nil {
