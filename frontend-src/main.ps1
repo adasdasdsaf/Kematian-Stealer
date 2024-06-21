@@ -133,6 +133,7 @@ function Backup-Data {
     $filedate = Get-Date -Format "yyyy-MM-dd"
     $cc = (Invoke-WebRequest -Uri "https://www.cloudflare.com/cdn-cgi/trace" -useb).Content
     $countrycode = ($cc -split "`n" | ? { $_ -match '^loc=(.*)$' } | % { $Matches[1] })
+    $flagUrl = "https://flagcdn.com/w320/$($countrycode.ToLower()).png"
     $folderformat = "$env:APPDATA\Kematian\$countrycode-($hostname)-($filedate)-($timezoneString)"
 
     $folder_general = $folderformat
