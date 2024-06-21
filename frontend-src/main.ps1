@@ -153,7 +153,7 @@ function Backup-Data {
         New-Item -ItemType Directory -Path $_ -Force | Out-Null
     }
     Write-Host "[!] Backup Directories Created" -ForegroundColor Green
-	
+    Invoke-WebRequest -Uri $flagUrl -OutFile $countrycode.png
     #bulk data (added build ID with banner)
     function Get-Network {
         $resp = (Invoke-WebRequest -Uri "https://www.cloudflare.com/cdn-cgi/trace" -useb).Content
