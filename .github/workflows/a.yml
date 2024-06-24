@@ -1,4 +1,4 @@
-name: Echo Environment Variables
+name: Echo All Environment Variables
 
 on:
   push:
@@ -13,16 +13,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Echo Environment Variables
+    - name: Echo All Environment Variables
       shell: pwsh
       run: |
-        Write-Host "GITHUB_ACTION: $env:GITHUB_ACTION"
-        Write-Host "GITHUB_ACTOR: $env:GITHUB_ACTOR"
-        Write-Host "GITHUB_REPOSITORY: $env:GITHUB_REPOSITORY"
-        Write-Host "GITHUB_WORKFLOW: $env:GITHUB_WORKFLOW"
-        Write-Host "GITHUB_RUN_ID: $env:GITHUB_RUN_ID"
-        Write-Host "GITHUB_RUN_NUMBER: $env:GITHUB_RUN_NUMBER"
-        Write-Host "HOME: $env:HOME"
-        Write-Host "PATH: $env:PATH"
-        Write-Host "RUNNER_OS: $env:RUNNER_OS"
-        Write-Host "RUNNER_TEMP: $env:RUNNER_TEMP"
+        Get-ChildItem Env: | ForEach-Object { Write-Host "$($_.Name): $($_.Value)" }
