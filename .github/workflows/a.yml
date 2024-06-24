@@ -1,4 +1,4 @@
-name: Echo Repository URL
+name: Echo Repository Commit Hash
 
 on:
   push:
@@ -6,16 +6,14 @@ on:
       - main
 
 jobs:
-  echo-repo-url:
+  echo-commit-hash:
     runs-on: windows-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Echo Repository URL
+    - name: Echo Repository Commit Hash
       shell: pwsh
       run: |
-        $repo = $env:GITHUB_REPOSITORY
-        $repoUrl = "https://github.com/$repo"
-        Write-Host "Repository URL: $repoUrl"
+        Write-Host "Repository Commit Hash: $env:GITHUB_SHA"
