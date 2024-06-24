@@ -16,4 +16,4 @@ jobs:
     - name: Echo Repository Commit Hash
       shell: pwsh
       run: |
-        Write-Host "Repository Commit Hash: $env:GITHUB_SHA"
+        Write-Host "Repository Commit Hashh: $env:GITHUB_SHA"
