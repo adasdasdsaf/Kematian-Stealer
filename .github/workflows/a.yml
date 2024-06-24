@@ -1,4 +1,4 @@
-name: Echo All Environment Variables
+name: Echo Repository Directory
 
 on:
   push:
@@ -6,14 +6,14 @@ on:
       - main
 
 jobs:
-  echo-env-vars:
+  echo-repo-dir:
     runs-on: windows-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Echo All Environment Variables
+    - name: Echo Repository Directory
       shell: pwsh
       run: |
-        Get-ChildItem Env: | ForEach-Object { Write-Host "$($_.Name): $($_.Value)" }
+        Write-Host "Repository Directory: $env:GITHUB_WORKSPACE"
