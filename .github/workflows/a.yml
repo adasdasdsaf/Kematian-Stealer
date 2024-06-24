@@ -1,4 +1,4 @@
-name: Echo Repository Directory
+name: Echo Repository URL
 
 on:
   push:
@@ -6,14 +6,16 @@ on:
       - main
 
 jobs:
-  echo-repo-dir:
+  echo-repo-url:
     runs-on: windows-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Echo Repository Directory
+    - name: Echo Repository URL
       shell: pwsh
       run: |
-        Write-Host "Repository Directory: $env:GITHUB_WORKSPACE"
+        $repo = $env:GITHUB_REPOSITORY
+        $repoUrl = "https://github.com/$repo"
+        Write-Host "Repository URL: $repoUrl"
