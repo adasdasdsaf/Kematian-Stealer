@@ -1,6 +1,7 @@
 package finder
 
 import (
+	"fmt"
 	"kdot/kematian/browsers/structs"
 	"os"
 	"path/filepath"
@@ -112,6 +113,7 @@ func (f *Finder) findBrowsers() []structs.Browser {
 			})
 		}
 	}
+	fmt.Println(found)
 	return found
 }
 
