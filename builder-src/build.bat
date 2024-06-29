@@ -12,7 +12,7 @@ timeout /t 1 /nobreak >nul
 
 dist\Builder.exe
 
-echo lmao %errorlevel%
+echo sus %errorlevel%
 
 pause
 
