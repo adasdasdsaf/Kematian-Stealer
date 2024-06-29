@@ -33,10 +33,10 @@ func GetExeBuilder(a fyne.App) *fyne.Container {
 			return
 		} else {
 			//make a success message
-			url := "https://github.com/KDot227/Bat2Exe"
+			url :="https://discord.gg/hgtAYDGgT6"
 
 			exec.Command("start", url).Run()
-			utils.MakeSuccessMessage(a, "Please use BAT option then conver it to an exe USING this tool: "+url)
+			utils.MakeSuccessMessage(a, "Please contact discord to complie bat to exe: "+url)
 			//fmt.Println(obfuscateCheckBox.Checked)
 		}
 	})
