@@ -18,7 +18,7 @@ func GetHomeTab(a fyne.App) *fyne.Container {
 	mainTitle.Alignment = fyne.TextAlignCenter
 	mainTitle.TextSize = 32
 
-	textBox := canvas.NewText("Made with love ❌ code ✔️", blue)
+	textBox := canvas.NewText("Made with love ❌ Made with gay ✔️", blue)
 	textBox.Alignment = fyne.TextAlignCenter
 	textBox.TextSize = 18
 
