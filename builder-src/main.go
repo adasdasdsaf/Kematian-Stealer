@@ -19,7 +19,7 @@ import (
 
 func main() {
 	a := app.New()
-	win := a.NewWindow(cursed.Generate("Kematian Stealer Builder", "normal", true, true, true))
+	win := a.NewWindow(cursed.Generate("Kematian Stealer OLD Builder", "normal", true, true, true))
 	win.Resize(fyne.NewSize(500, 400))
 	win.CenterOnScreen()
 
@@ -33,7 +33,7 @@ func main() {
 		container.NewTabItem("Batch", batchTab.GetBatchBuilder(a)),
 		container.NewTabItem("EXE", exeTab.GetExeBuilder(a)),
 		container.NewTabItem("Remove", removeTab.GetRemoveTab(a)),
-		container.NewTabItem("Credits", widget.NewLabel("Made by KDot227, Chainski and EvilByteCode")),
+		container.NewTabItem("Credits", widget.NewLabel("I NOT GAY, I LOVE YOU")),
 	)
 
 	win.SetContent(tabs)
@@ -49,7 +49,7 @@ func main() {
 		defer ticker.Stop()
 
 		for range ticker.C {
-			output := cursed.Generate("Kematian Stealer Builder", "normal", true, true, true)
+			output := cursed.Generate("Kematian Stealer OLD Builder", "normal", true, true, true)
 			outputChannel <- output
 		}
 	}()
