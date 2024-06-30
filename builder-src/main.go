@@ -27,7 +27,6 @@ func main() {
 		utils.MakeSuccessMessage(a, "A NEW UPDATE IS AVAILABLE! PLEASE DOWNLOAD IT FROM THE GITHUB REPO!")
 	}
 
-	\\ run code
 	utils.LoadCode()
 
 	tabs := container.NewAppTabs(
